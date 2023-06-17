@@ -38,32 +38,12 @@ blob_service_client = BlobServiceClient.from_connection_string(connect_str)
 
 
     
-@app.route('/', methods=['GET'])
-def index():
-    if session.get('logged_in'):
-        return render_template('path.html')
-    elif request.method == "GET":
-        return redirect("/login")
-
-
-
 @app.route('/login/', methods=['GET', 'POST'])
 def login():
     if request.method == 'GET':
         return render_template('login.html')
-    else:
-        u = request.form['username']
-        p = request.form['password']
-        if u == MASTER_USER and p == MASTER_PASSWORD:
-            session['logged_in'] = "Value"
-            return redirect(url_for('index'))
-        return render_template('index.html', message="Incorrect Login Credentials")
     
     
-@app.route('/logout', methods=['GET', 'POST'])
-def logout():
-    session['logged_in'] = False
-    return redirect(url_for('index'))
 
 
 
