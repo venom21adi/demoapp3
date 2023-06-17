@@ -7,5 +7,4 @@ wordcloud
 pytextrank
 scipy
 numpy
-fitz
 azure-storage-blob
