@@ -1,0 +1,11 @@
+flask
+Flask-SQLAlchemy
+Flask-Login
+pandas
+spacy
+wordcloud
+pytextrank
+scipy
+numpy
+fitz
+azure-storage-blob
