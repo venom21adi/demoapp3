@@ -1,21 +1,18 @@
 
-from werkzeug.utils import secure_filename
-from azure.storage.blob import BlobServiceClient, generate_blob_sas, BlobSasPermissions
 
-import os
-from datetime import datetime, timedelta
 
 #-----------------------------------
 
 from flask import *  
-from flask import Flask, request, session 
-#from flask_sqlalchemy import SQLAlchemy
-from  flask_login import *
-
-from  flask_login import LoginManager
 import fitz
 import pandas as pd
 import requests
+
+from werkzeug.utils import secure_filename
+from azure.storage.blob import BlobServiceClient, generate_blob_sas, BlobSasPermissions
+
+import os
+
 MASTER_USER = "test"
 MASTER_PASSWORD = "test"
 
