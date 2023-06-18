@@ -18,9 +18,10 @@ app.secret_key = os.urandom(24)
 
 
     
-@app.route('/login/', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def login():
-    return"Hello cruel world!"
+    return render_template("login.html")
+    
 
 
 if __name__ == "__main__":
