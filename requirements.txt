@@ -8,3 +8,4 @@ pytextrank
 scipy
 numpy
 azure-storage-blob
+openpyxl
