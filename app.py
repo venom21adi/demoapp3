@@ -13,8 +13,7 @@ from werkzeug.utils import secure_filename
 
 import os
 
-MASTER_USER = "test"
-MASTER_PASSWORD = "test"
+
 
 #-----------------------------------
 app = Flask(__name__)
@@ -28,22 +27,11 @@ allowed_ext = app.config['ALLOWED_EXTENSIONS'] # List of accepted extensions
 max_length = app.config['MAX_CONTENT_LENGTH'] # Maximum size of the uploaded file
 
 
-
-blob_service_client = BlobServiceClient.from_connection_string(connect_str)
-
-
-
-
     
 @app.route('/login/', methods=['GET', 'POST'])
 def login():
     if request.method == 'GET':
         return render_template('login.html')
-    
-    
-
-
-
 
 
 if __name__ == "__main__":
