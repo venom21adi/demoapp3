@@ -10,6 +10,8 @@ from werkzeug.utils import secure_filename
 import os
 import pandas as pd
 import requests
+import fitz
+
 
 
 #-----------------------------------
